@@ -55,6 +55,7 @@ jobs:
           
       - name: Install tree-sitter CLI
         run: npm install -g tree-sitter-cli@0.19.3
+        if: matrix.os != 'self-hosted'
 
       - uses: jcs090218/setup-emacs@master
         with:
